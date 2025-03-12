@@ -1,0 +1,36 @@
+CREATE TABLE `afthead` (
+	`typ` CHAR(1) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	`nr` CHAR(8) NOT NULL DEFAULT '' COLLATE 'latin1_swedish_ci',
+	`nrb` CHAR(8) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	`lknr` CHAR(7) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	`rknr` CHAR(7) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	`datum` DATE NULL DEFAULT NULL,
+	`adatum` DATE NULL DEFAULT NULL,
+	`info` CHAR(30) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	`betreff` CHAR(45) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	`akt` CHAR(1) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	`lw` INT(2) UNSIGNED NULL DEFAULT NULL,
+	`kg` INT(10) UNSIGNED NULL DEFAULT NULL,
+	`ein` INT(10) UNSIGNED NULL DEFAULT NULL,
+	`status` INT(10) UNSIGNED NULL DEFAULT NULL,
+	`arzt` CHAR(9) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	`rezdate` DATE NULL DEFAULT NULL,
+	`ukz` CHAR(1) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	`bkz` CHAR(1) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	`zkz` CHAR(1) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	`gendate` DATE NULL DEFAULT NULL,
+	`genkz` CHAR(12) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	`regnr` CHAR(15) NULL DEFAULT NULL COLLATE 'latin1_swedish_ci',
+	PRIMARY KEY (`nr`) USING BTREE,
+	INDEX `betreff` (`betreff`) USING BTREE,
+	INDEX `typ` (`typ`) USING BTREE,
+	INDEX `lknr` (`lknr`) USING BTREE,
+	INDEX `rknr` (`rknr`) USING BTREE,
+	INDEX `datum` (`datum`) USING BTREE,
+	INDEX `kg` (`kg`) USING BTREE,
+	INDEX `ein` (`ein`) USING BTREE,
+	INDEX `status` (`status`) USING BTREE
+)
+COLLATE='latin1_swedish_ci'
+ENGINE=MyISAM
+;
