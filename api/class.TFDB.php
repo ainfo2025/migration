@@ -1,8 +1,8 @@
 <?php
 // Simple Example Mysql/PDO midlayer for ease of use...
 
-include_once "ainfoconfig.php"; // local config -> TF
-//include_once "config.php";    // your config
+//include_once "ainfoconfig.php"; // local config -> TF
+include_once "config.php";    // your config
 
 class TFDB
 {
