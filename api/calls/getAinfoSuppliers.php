@@ -13,8 +13,11 @@ $result = $this->query("SELECT * FROM lieferanten order by mcode");
 if ($this->RECORDS > 0) {
     $this->setData($result);
     $this->setResult('ok');
+    $this->setErrorDescription('alles gut :)');
+
 } else {
     $this->setData([]);
     $this->setResult('err');
+    $this->setErrorDescription('Es ist etwas schief gelaufen ):');
 }
 ?>

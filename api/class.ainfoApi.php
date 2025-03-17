@@ -24,7 +24,7 @@ class ainfoApi extends TFDB{
         $this->result['errString'] = 'Result can only be "err" or "ok"';
     }
     
-    public function setErrorString($s){
+    public function setErrorDescription($s){
         $this->result['errString'] = $s;
     }
 

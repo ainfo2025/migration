@@ -17,11 +17,11 @@ class apiCall extends ainfoApi
                 include_once($this->path . $P['f'] . '.php');
             } else {
                 $this->setResult('err');
-                $this->setErrorString("Function Call '{$P['f']}' is not defined");
+                $this->setErrorDescription("Function Call '{$P['f']}' is not defined");
             }
         } else {
             $this->setResult('err');
-            $this->setErrorString('No Function Call defined');
+            $this->setErrorDescription('No Function Call defined');
 
         }
 
